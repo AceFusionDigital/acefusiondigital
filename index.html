@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="High-impact videos that transform curiosity into sales. Streamline the customer experience and keep your fans hooked with our professional video marketing services.">
+    <meta name="keywords" content="video marketing, customer engagement, increase sales, professional videos, digital products">
+    <meta name="author" content="Ace Fusion">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Fusion - Digital Marketing Agency</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="icons/acefusion.png" type="image/x-icon">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Back to Top Button Styles */
+        #back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: #30779f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        #back-to-top:hover {
+            background-color: #3fd7f5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="icons/acefusion.pngh" alt="Ace Fusion Logo" class="logo" onclick="goToHome()">
+            <button class="burger-menu" aria-label="Toggle navigation">
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+                <span class="burger-bar"></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#solution">Our Solution</a></li>
+                   <!-- <li><a href="#TBA">Latest Work</a></li> -->
+                    <li><a href="#process">How It Works</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="#book" class="btn hero-btn">Book a Call</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>High-Impact <br>Videos That Transform <br> Curiosity Into Sales</h1>
+                <p class="perfWrap">
+                    Feeling the Customer Engagement Blues? Streamline The Experience & Keep Your Fans Hooked!
+                </p>
+                <br><br>
+                <div class="iframe-container">
+                    <iframe src="https://player.vimeo.com/video/960683250?h=f791f905e0&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen aria-label="Promotional Video"></iframe>
+                </div>
+                <a href="#book" class="btn hero-btn"> Book my FREE Call Today</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="solution" class="section">
+        <div class="container">
+            <h2><div class="counter" id="counter">0%</div></h2>
+            <p class="perfWrap2">Videos Increase Website Conversions by Up to 86%</p>
+        </div>
+    </section>
+    
+
+<section id="solution" class="section2">
+    <div class="container">
+        <h2>Social Media Followers into Loyal Customers</h2>
+        <p class="perfWrap2">
+            73% of consumers are influenced by a brand's social media presence when making purchase decisions.
+        </p>
+    </div>
+</section>
+
+<section id="process" class="section">
+    <div class="container">
+        <h2 class="">How It Works</h2>
+        <p>This straightforward 3-step process brings your vision to life in 36 hours.</p>
+        <div class="steps">
+            <div class="step">
+
+                <div class="step-content">
+                    <h3>Step 1: You Book A Quick Call</h3>
+                    <p>Schedule a quick call to discuss your needs and goals. We'll gather all necessary information to tailor our solution specifically for your business.</p>
+                    <a href="#book"><button class="step-button"> Book My Call Now</button></a>
+                </div>
+            </div>
+            <div class="step">
+
+                <div class="step-content">
+                    <h3>Step 2: Researching</h3>
+                    <p> By analyzing your market and competitors, we to create a strategy that sets you apart. We focus on high-impact solutions that drive results.</p>
+                </div>
+            </div>
+            <div class="step">
+
+                <div class="step-content">
+                    <h3>Step 3: Creation</h3>
+                    <p>We create and develop high-quality videos that engage your audience and start the process of transforming curiosity into sales.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faqs" class="section">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-content">
+            <div class="faq-item">
+                <h3 onclick="toggleContent(this)">Who Are The Creators? <span class="toggle-icon">+</span></h3>
+                <div class="faq-details" style="display: none;">
+                    <p>
+                        <h2>Ace Fusion is an Agency of One</h2> This means you'll work directly with me, founder of Ace Fusion.<br><br>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 onclick="toggleContent(this)">What If I Don’t Like The Video? <span class="toggle-icon">+</span></h3>
+                <div class="faq-details" style="display: none;">
+                    <p>
+                        <h2>UNLIMITED REVISIONS:</h2> Your satisfaction is #1 priority. You will get UNLIMITED revisions to ensure the final product meets your expectations.<br><br>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 onclick="toggleContent(this)">How Fast Will I Receive My Video? <span class="toggle-icon">+</span></h3>
+                <div class="faq-details" style="display: none;">
+                    <p>
+                        <h2>Standard turnaround:</h2>For straightforward edits, you'll receive your video within 36 hours.<br><br>
+                        <h2 style="color:rgb(255, 0, 255)">Custom projects:</h2> If your project requires more creative elements or custom assets, we'll work with you to establish a timeline that meets your needs.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleContent(this)">Are There Any Refunds If I Don’t Like The Service? <span class="toggle-icon">+</span></h3>
+                <div class="faq-details" style="display: none;">
+                    <p><h2>No, worries!</h2> I'll work tirelessly on revisions until you're absolutely thrilled with the final video. Your satisfaction is my top priority.</p>
+                </div>
+            </div>
+        </div>
+    </div>  
+</section>
+
+
+<section id="book" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>
+                Curious about skyrocketing your sales? Grab a drink, let's chat!
+            </h1>
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/acefusiondigital/discovery?primary_color=3da5d4" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <h1> Hate Getting on Calls? </h1>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="social-media">
+            <a href="mailto:acefusiondigital@gmail.com"><img src="/icons/email.png" alt="Email" class="logo-icon-socials"></a>
+            <a href="https://www.instagram.com/acefusiondigital/"><img src="/icons/instagram.png" alt="Instagram" class="logo-icon-socials"></a>
+            <a href="https://x.com/AceFusionMedia"><img src="/icons/x2.png" alt="X" class="logo-icon-socials"></a>
+            <a href="https://www.youtube.com/channel/UCWH1hW5-6hMmB-yo9TCeQHg"><img src="/icons/youtube2.png" alt="YouTube" class="logo-icon-socials"></a>
+        </div>
+        <br>
+        <a href="#hero"><button class="step-button"> Back To Top</button></a>
+        <br><br><br>
+        <p>&copy; 2024 Ace Fusion. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
