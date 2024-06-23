@@ -11,7 +11,13 @@
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="icons/acefusion.png" type="image/x-icon">
-    <style>
+    <script>
+        window.onerror = function(message, source, lineno, colno, error) {
+            console.error("Error occurred: ", message, " at ", source, ":", lineno, ":", colno);
+        };
+    </script>
+    <script src="your-script.js" defer></script>
+<style>
         html {
             scroll-behavior: smooth;
         }
@@ -59,6 +65,14 @@
         </div>
     </header>
     
+    <!-- Hide the burger menu when JavaScript is disabled -->
+    <noscript>
+        <style>
+            .burger-menu {
+                display: none;
+            }
+        </style>
+    </noscript>
 
     <section id="hero" class="hero">
         <div class="container">
@@ -76,11 +90,9 @@
         </div>
     </section>
 
-
     <section id="" class="section3">
         <div class="container">
             <h2>Attention Retention</h2><p class="perfWrap2">Re-engaging your audience whenever they start to drift is the fastest way to build trust. Approximately 7 hours of engagement are needed to convert a lead by building trust and connection. 
-    
             </p>
     </section>
     <section id="solution" class="section2">
@@ -97,7 +109,6 @@
                 creators on social media when making purchases.
             </div>
     </section>
-
 
 <section id="process" class="section">
     <div class="container">
@@ -171,6 +182,17 @@
     </div>  
 </section>
 
+<!-- Display all FAQ content when JavaScript is disabled -->
+<noscript>
+    <style>
+        .faq-details {
+            display: block !important;
+        }
+        .faq-item h3 .toggle-icon {
+            display: none;
+        }
+    </style>
+</noscript>
 
 <section id="book" class="hero">
     <div class="container">
