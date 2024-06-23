@@ -664,7 +664,7 @@ header nav {
     }
 
     .section p.perfWrap2 {
-        font-size: 1em; /* Adjusted for better scaling */
+        font-size: 1%; /* Adjusted for better scaling */
     }
 
     .feature-box, .step, .faq-item {
@@ -714,11 +714,11 @@ header nav {
 /* Media Queries for Mobile Phones */
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     .hero p {
-        font-size: 0.75em;
+        font-size: 1em;
     }
 
     .hero .btn {
