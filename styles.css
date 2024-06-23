@@ -76,12 +76,6 @@ p {
     z-index: 2; /* Ensure it stays above the iframe */
 }
 
-
-
-
-
-
-
 .container {
     width: 80%;
     margin: 0 auto;
@@ -102,9 +96,11 @@ header {
 }
 
 header img.logo {
-    height: 50px;
+    height: 50%;
     position: absolute;
     left: 20px;
+    border-radius: 50%; /* Makes the image circular */
+
 }
 
 header nav ul {
@@ -231,9 +227,10 @@ header .btn:hover {
     display: flex; /* Enables flexbox layout */
     justify-content: center; /* Centers content horizontally */
     align-items: center; /* Centers content vertically */
-    width: 40%; /* Sets the width to 30% of the available space */
+    width: 55%; /* Sets the width to 30% of the available space */
     margin: 0 auto; /* Centers the element horizontally within its container */
-  }
+    white-space: pre-line;
+}
 
 .section {
     padding: 50px 0;
@@ -258,6 +255,19 @@ header .btn:hover {
     margin: 0 auto; /* Center container horizontally */
 }
 .section2 h2{
+    font-size: 2.3em;
+}
+
+.section3 {
+    background: linear-gradient(135deg, #252831 0%, #30779f 100%);
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin: 0 auto; /* Center container horizontally */
+}
+.section3 h2{
     font-size: 2.3em;
 }
 
@@ -343,6 +353,8 @@ header .btn:hover {
 #faqs h2 {
     font-size: 2em;
     margin-bottom: 20px;
+    color: rgb(0, 255, 255);
+
 }
 
 .faq-content {
@@ -363,6 +375,7 @@ header .btn:hover {
     align-items: center;
     font-size: 1.5em;
     margin: 0;
+    
 }
 
 .faq-item .toggle-icon {
@@ -372,12 +385,14 @@ header .btn:hover {
 
 .faq-item.active .toggle-icon {
     transform: rotate(45deg);
+    
 }
 
 .faq-details {
     display: none;
     padding-top: 10px;
     font-size: 1em;
+    background: linear-gradient(135deg, #252831 0%, #30779f 100%);
 }
 
 #read-more-btn {
@@ -477,6 +492,15 @@ footer p {
 
 .step-button {
     background-color: #3fd7f5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.step-button2 {
+    background-color: #000000;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -672,6 +696,18 @@ header nav {
     .perfWrap, .perfWrap2 {
         width: 100%;
     }
+    header img.logo {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 10px;
+        width: 50px; /* Adjust the width as needed */
+        height: auto;
+        max-height: 50px; /* Ensures the image doesn't exceed the header height */
+        object-fit: cover;
+        border-radius: 50%; /* Makes the image circular */
+        position: absolute;
+        bottom: 0; /* Aligns the image to the bottom of the header */
+    }
 }
 
 /* Media Queries for Mobile Phones */
@@ -724,10 +760,19 @@ header nav {
     }
 
     header img.logo {
+        top:9%;
         left: 50%;
         transform: translateX(-50%);
         margin-bottom: 10px;
+        width: 50px; /* Adjust the width as needed */
+        height: auto;
+        max-height: 50px; /* Ensures the image doesn't exceed the header height */
+        object-fit: cover;
+        border-radius: 50%; /* Makes the image circular */
+        position: absolute;
+        bottom: 0; /* Aligns the image to the bottom of the header */
     }
+    
 
     header nav ul {
         flex-direction: column;
