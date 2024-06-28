@@ -643,6 +643,11 @@ header nav {
         color: var(--text-color);
         text-decoration: none;
     }
+    .logo-icon-socials {
+        width: 40px; /* Adjust width for better fit on mobile */
+        height: 40px; /* Adjust height for better fit on mobile */
+        margin-left: 10px; /* Adjust margin for better spacing on mobile */
+    }
 }
 
 /* General styles for iframe container */
@@ -662,6 +667,7 @@ header nav {
     height: 100%;
     border: 0;
 }
+
 
 /* Media Queries for Tablets */
 @media (max-width: 768px) {
