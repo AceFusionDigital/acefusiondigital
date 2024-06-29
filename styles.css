@@ -7,23 +7,22 @@
     --text-color: #ffffff; /* White for main text */
     --highlight-text-color: #676562; /* Medium gray for highlighted text */
     --button-background: #2b2d33; /* Dark blue-gray for buttons */
-    --button-hover-background: #676562; /* Medium gray for button hover */
+    --button-hover-background: #bfc305; /* Medium gray for button hover */
     --box-shadow-color: rgba(43, 45, 51, 0.5); /* Dark blue-gray shadow */
     --grid-size: 20px; /* Size of the grid lines */
     --grid-color: rgba(255, 255, 255, 0.1); /* Grid line color with opacity, adjusted for better visibility */
     --box-shadow-color-light: rgba(183, 159, 204, 0); /* Light shadow color */
-    --highlight-hover-color: rgba(103, 101, 98, 0.8); /* Hover highlight color */
+    --highlight-hover-color: #bfc305; /* Hover highlight color */
     --button-shadow-inset: rgba(255, 255, 255, 0.2); /* Inset shadow for buttons */
     --button-shadow-outset: rgba(0, 0, 0, 0.2); /* Outset shadow for buttons */
-    --button-hover-shadow-inset: rgba(255, 255, 255, 0.4); /* Inset shadow on hover */
-    --button-hover-shadow-outset: rgba(0, 0, 0, 0.3); /* Outset shadow on hover */
+    --button-hover-shadow-inset: #bfc305; /* Inset shadow on hover */
+    --button-hover-shadow-outset: #bfc305; /* Outset shadow on hover */
     --hero-overlay-color: rgba(15, 17, 23, 0.5); /* Hero section overlay */
     --faq-border-color: #444444; /* FAQ item border color */
     --step-box-shadow-color: rgba(0, 0, 0, 0.1); /* Step box shadow color */
     --back-to-top-color: #bfc305; /* Back to top button color */
     --toggle-icon-color: #676562; /* FAQ toggle icon color */
 }
-
 
 /* Global Styles */
 * {
@@ -46,7 +45,6 @@ body {
     linear-gradient(var(--grid-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
     background-size: var(--grid-size) var(--grid-size);    
-    
 }
 
 /* Infographic */
@@ -249,7 +247,13 @@ header .btn:hover {
 
 .hero .btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px var(--box-shadow-color);
+    box-shadow: 0 6px 20px var(--primary-color);
+}
+
+.btn-container {
+    display: inline-block;
+    padding: 33px; /* Add padding to avoid cropping */
+    background: var(--background-color); /* Same as the hero background to blend in */
 }
 
 /* Video Embed */
@@ -289,6 +293,14 @@ header .btn:hover {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    
+}
+
+.section2{
+    background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);    
 }
 
 .section h2, .section2 h2, .section3 h2, .section4 h2 {
@@ -444,8 +456,7 @@ header .btn:hover {
 .social-media {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
-    
+    margin: 20px 0;  
 }
 
 .social-media a {
@@ -457,8 +468,7 @@ footer {
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
     color: var(--background-color);
     text-align: center;
-    padding: 10px 0;
-    
+    padding: 10px 0;    
 }
 
 footer p {
@@ -468,7 +478,6 @@ footer p {
 /* Process Section */
 #process {
     text-align: center;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
     padding: 50px 0;
 }
 
@@ -542,7 +551,7 @@ footer p {
 }
 
 .step-button:hover {
-    background-color: var(--box-shadow-color);
+    background-color: var(--primary-color);
 }
 
 .counter {
@@ -564,7 +573,7 @@ footer p {
 
 /* Styles for burger menu */
 .burger-menu {
-    display: none;
+    display:absolute;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -574,6 +583,7 @@ footer p {
     cursor: pointer;
     z-index: 12;
     margin-right: 20px;
+    
 }
 
 .burger-bar {
@@ -595,20 +605,11 @@ header nav {
 
 @media (max-width: 768px) {
     .burger-menu {
-        display: flex;
+        display: none;
+        position: relative;
     }
-
     header nav ul {
         display: none;
-        flex-direction: column;
-        width: 100%;
-        background: var(--background-color);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 0;
-        margin: 0;
-        list-style: none;
     }
 
     header nav ul.active {
@@ -674,7 +675,7 @@ header nav {
     }
 
     .hero h1 {
-        font-size: 1.3em;
+        font-size: 2em;
     }
 
     .hero p {
