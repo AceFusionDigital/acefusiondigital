@@ -1,19 +1,29 @@
 :root {
-    --primary-color: #1c0043;
-    --secondary-color: #0b011d;
-    --accent-color: #4c0097;
-    --highlight-color: #ffffff;
-    --background-color: #000000;
-    --text-color: #ffffff;
-    --highlight-text-color: #3fd7f5;
-    --button-background: #865aff;
-    --button-hover-background: #00c3fff9;
-    --box-shadow-color: rgba(166, 0, 255, 0.5);
-
+    --primary-color: #bfc305; /* Yellow-green for primary elements */
+    --secondary-color: #676562; /* Medium gray for secondary elements */
+    --accent-color: #2b2d33; /* Dark blue-gray for accents */
+    --highlight-color: #333231; /* Dark gray for highlights */
+    --background-color: #0f1117; /* Almost black for background */
+    --text-color: #ffffff; /* White for main text */
+    --highlight-text-color: #676562; /* Medium gray for highlighted text */
+    --button-background: #2b2d33; /* Dark blue-gray for buttons */
+    --button-hover-background: #676562; /* Medium gray for button hover */
+    --box-shadow-color: rgba(43, 45, 51, 0.5); /* Dark blue-gray shadow */
     --grid-size: 20px; /* Size of the grid lines */
-    --grid-color: rgba(76, 76, 76, 0.2); /* Grid line color with opacity */
-    
+    --grid-color: rgba(255, 255, 255, 0.1); /* Grid line color with opacity, adjusted for better visibility */
+    --box-shadow-color-light: rgba(183, 159, 204, 0); /* Light shadow color */
+    --highlight-hover-color: rgba(103, 101, 98, 0.8); /* Hover highlight color */
+    --button-shadow-inset: rgba(255, 255, 255, 0.2); /* Inset shadow for buttons */
+    --button-shadow-outset: rgba(0, 0, 0, 0.2); /* Outset shadow for buttons */
+    --button-hover-shadow-inset: rgba(255, 255, 255, 0.4); /* Inset shadow on hover */
+    --button-hover-shadow-outset: rgba(0, 0, 0, 0.3); /* Outset shadow on hover */
+    --hero-overlay-color: rgba(15, 17, 23, 0.5); /* Hero section overlay */
+    --faq-border-color: #444444; /* FAQ item border color */
+    --step-box-shadow-color: rgba(0, 0, 0, 0.1); /* Step box shadow color */
+    --back-to-top-color: #bfc305; /* Back to top button color */
+    --toggle-icon-color: #676562; /* FAQ toggle icon color */
 }
+
 
 /* Global Styles */
 * {
@@ -28,7 +38,7 @@ html {
 
 body {
     font-family: 'Bricolage Grotesque', sans-serif;
-    background: var(--secondary-color);
+    background: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
     font-size: 100%;
@@ -36,6 +46,7 @@ body {
     linear-gradient(var(--grid-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
     background-size: var(--grid-size) var(--grid-size);    
+    
 }
 
 /* Infographic */
@@ -86,7 +97,7 @@ p {
     left: 0;
     width: 100%;
     height: 30px;
-    background: linear-gradient(to top, var(--box-shadow-color), rgba(183, 159, 204, 0));
+    background: linear-gradient(to top, var(--box-shadow-color), var(--box-shadow-color-light));
     pointer-events: none;
     z-index: 2;
 }
@@ -101,7 +112,7 @@ p {
 
 /* Header */
 header {
-    background: rgba(61, 37, 86, 0.8);
+    background: var(--background-color);
     color: var(--text-color);
     padding: 20px 0;
     border-bottom: 3px solid var(--highlight-color);
@@ -141,7 +152,7 @@ header nav ul {
     display: flex;
     align-items: center;
     gap: 20px;
-    background: rgba(61, 37, 86, 0.8);
+    background: var(--background-color);
     padding: 10px 20px;
     border-radius: 10px;
     backdrop-filter: blur(10px);
@@ -160,7 +171,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background: rgba(75, 59, 94, 0.8);
+    background: var(--highlight-hover-color);
     border-radius: 5px;
     transition: background 0.3s ease-in-out;
 }
@@ -171,20 +182,20 @@ header .btn {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    box-shadow: inset 0 -3px 0 rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 -3px 0 var(--button-shadow-inset), 0 2px 4px var(--button-shadow-outset);
     transition: transform 0.2s, box-shadow 0.2s;
     font-size: 0.9em;
 }
 
 header .btn:hover {
     transform: scale(1.05);
-    box-shadow: inset 0 -3px 0 rgba(255, 255, 255, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 -3px 0 var(--button-hover-shadow-inset), 0 4px 8px var(--button-hover-shadow-outset);
     background: var(--button-hover-background);
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    background: var(--background-color);
     color: var(--text-color);
     padding: 100px 0;
     text-align: center;
@@ -198,8 +209,7 @@ header .btn:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.1);
+    background: var(--hero-overlay-color);
     z-index: 1;
 }
 
@@ -214,7 +224,7 @@ header .btn:hover {
     font-size: 2em;
     margin-bottom: 20px;
     line-height: 1.2;
-    color: var(--highlight-color);
+    color: var(--primary-color);
 }
 
 .hero p {
@@ -228,7 +238,7 @@ header .btn:hover {
     margin-top: 20px;
     background: var(--button-background);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px var(--box-shadow-color);
     padding: 15px 30px;
     border-radius: 5px;
     color: var(--text-color);
@@ -239,7 +249,7 @@ header .btn:hover {
 
 .hero .btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 20px var(--box-shadow-color);
 }
 
 /* Video Embed */
@@ -249,7 +259,7 @@ header .btn:hover {
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px var(--box-shadow-color);
 }
 
 /* Performance Wrapper */
@@ -271,9 +281,9 @@ header .btn:hover {
 }
 
 /* Sections */
-.section {
+.section, .section3, .section2, .section4 {
     padding: 50px 0;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    background: var(--background-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -281,35 +291,8 @@ header .btn:hover {
     margin: 0 auto;
 }
 
-.section h2 {
-    color: var(--highlight-color);
-    font-size: 2.3em;
-}
-
-.section2 {
-    padding: 50px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.section2 h2 {
-    font-size: 2.3em;
-}
-
-.section3 {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
-    padding: 50px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.section3 h2 {
+.section h2, .section2 h2, .section3 h2, .section4 h2 {
+    color: var(--primary-color);
     font-size: 2.3em;
 }
 
@@ -332,7 +315,7 @@ header .btn:hover {
     padding: 20px;
     border-radius: 10px;
     margin: 10px 1%;
-    box-shadow: 0 0 0px var(--box-shadow-color), 0 0 10px rgb(255, 255, 255), 0 0 0px var(--box-shadow-color);
+    box-shadow: 0 0 0px var(--box-shadow-color), 0 0 10px var(--highlight-color), 0 0 0px var(--box-shadow-color);
     text-align: center;
     flex: 0 1 calc(30% - 2%);
     position: relative;
@@ -400,7 +383,7 @@ header .btn:hover {
 #faqs h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: var(--highlight-color);
+    color: var(--primary-color);
 }
 
 .faq-content {
@@ -410,7 +393,7 @@ header .btn:hover {
 }
 
 .faq-item {
-    border-bottom: 1px solid #444444;
+    border-bottom: 1px solid var(--faq-border-color);
     padding: 20px 0;
     cursor: pointer;
 }
@@ -421,11 +404,14 @@ header .btn:hover {
     align-items: center;
     font-size: 1.5em;
     margin: 0;
+    color: var(--text-color);
 }
 
 .faq-item .toggle-icon {
     font-size: 1.5em;
     transition: transform 0.3s ease;
+    color: var(--toggle-icon-color);
+    color: var(--primary-color);
 }
 
 .faq-item.active .toggle-icon {
@@ -459,6 +445,7 @@ header .btn:hover {
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    
 }
 
 .social-media a {
@@ -468,13 +455,14 @@ header .btn:hover {
 /* Footer */
 footer {
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
-    color: var(--text-color);
+    color: var(--background-color);
     text-align: center;
     padding: 10px 0;
+    
 }
 
 footer p {
-    color: #9baaa9;
+    color: var(--highlight-text-color);
 }
 
 /* Process Section */
@@ -503,7 +491,7 @@ footer p {
 
 .step {
     background: var(--accent-color);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px var(--box-shadow-color);
     border-radius: 10px;
     padding: 20px;
     width: 30%;
@@ -524,7 +512,7 @@ footer p {
 .step-content h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: var(--highlight-color);
+    color: var(--primary-color);
 }
 
 .step-content p {
@@ -544,7 +532,7 @@ footer p {
 }
 
 .step-button2 {
-    background-color: #272732;
+    background-color: var(--highlight-color);
     color: var(--text-color);
     border: none;
     padding: 10px 20px;
@@ -614,7 +602,7 @@ header nav {
         display: none;
         flex-direction: column;
         width: 100%;
-        background: rgba(61, 37, 86, 0.8);
+        background: var(--background-color);
         position: absolute;
         top: 60px;
         left: 0;
@@ -643,6 +631,7 @@ header nav {
         color: var(--text-color);
         text-decoration: none;
     }
+
     .logo-icon-socials {
         width: 40px; /* Adjust width for better fit on mobile */
         height: 40px; /* Adjust height for better fit on mobile */
@@ -667,7 +656,6 @@ header nav {
     height: 100%;
     border: 0;
 }
-
 
 /* Media Queries for Tablets */
 @media (max-width: 768px) {
@@ -701,6 +689,7 @@ header nav {
     .section h2 {
         font-size: 1.5em;
     }
+
     .perfWrap, .perfWrap2 {
         width: 100%;
     }
@@ -714,4 +703,25 @@ header nav {
         text-align: center;
         margin-top: 0px;
     }
+}
+
+/* Back to Top Button Styles */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: var(--highlight-text-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 15px var(--box-shadow-color);
+    transition: background-color 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: var(--back-to-top-color);
 }
