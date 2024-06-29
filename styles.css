@@ -18,7 +18,7 @@
     --button-hover-shadow-inset: #bfc305; /* Inset shadow on hover */
     --button-hover-shadow-outset: #bfc305; /* Outset shadow on hover */
     --hero-overlay-color: rgba(15, 17, 23, 0.5); /* Hero section overlay */
-    --faq-border-color: #444444; /* FAQ item border color */
+    --faq-border-color: #676562; /* FAQ item border color */
     --step-box-shadow-color: rgba(0, 0, 0, 0.1); /* Step box shadow color */
     --back-to-top-color: #bfc305; /* Back to top button color */
     --toggle-icon-color: #676562; /* FAQ toggle icon color */
@@ -434,7 +434,7 @@ header .btn:hover {
     display: none;
     padding-top: 10px;
     font-size: 1em;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    background: var(--button-background)
 }
 
 #read-more-btn {
@@ -519,8 +519,8 @@ footer p {
 }
 
 .step-content h3 {
-    font-size: 1.5em;
     margin-bottom: 10px;
+    font-size: 1.5em;
     color: var(--primary-color);
 }
 
@@ -531,7 +531,7 @@ footer p {
 }
 
 .step-button {
-    background-color: var(--secondary-color);
+    background-color: var(--background-color);
     color: var(--text-color);
     border: none;
     padding: 10px 20px;
@@ -725,4 +725,53 @@ header nav {
 
 #back-to-top:hover {
     background-color: var(--back-to-top-color);
+}
+
+
+
+/* Add these specific styles to your existing CSS */
+
+/* Flexbox layout for the side-by-side sections */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-md-6 {
+    flex: 1;
+    padding: 20px;
+    min-width: 300px; /* Ensures sections stack on smaller screens */
+}
+
+.goal-section, .not-for-you-section {
+    background: var(--accent-color);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px var(--box-shadow-color);
+    text-align: ri;
+}
+
+.goal-section h2, .not-for-you-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Align bullet points to the left */
+.goal-section p, .not-for-you-section p {
+    color: var(--text-color);
+    font-size: 1.2em;
+    text-align: left; /* Align text to the left */
+    margin-left: 20px; /* Optional: Add left margin for better alignment */
+    margin-right: 20px; /* Optional: Add right margin for balance */
+}
+
+.hero-content {
+    text-align: center;
+}
+
+/* Ensure the Calendly widget is centered */
+.calendly-inline-widget {
+    margin: 0 auto;
 }
