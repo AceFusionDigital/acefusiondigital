@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #bfc305; /* Yellow-green for primary elements */
+    --primary-color: #ffffff; /* Yellow-green for primary elements */
     --secondary-color: #676562; /* Medium gray for secondary elements */
     --accent-color: #2b2d33; /* Dark blue-gray for accents */
     --highlight-color: #333231; /* Dark gray for highlights */
@@ -7,20 +7,20 @@
     --text-color: #ffffff; /* White for main text */
     --highlight-text-color: #676562; /* Medium gray for highlighted text */
     --button-background: #2b2d33; /* Dark blue-gray for buttons */
-    --button-hover-background: #bfc305; /* Medium gray for button hover */
+    --button-hover-background: #000000; /* Medium gray for button hover */
     --box-shadow-color: rgba(43, 45, 51, 0.5); /* Dark blue-gray shadow */
     --grid-size: 20px; /* Size of the grid lines */
     --grid-color: rgba(255, 255, 255, 0.1); /* Grid line color with opacity, adjusted for better visibility */
     --box-shadow-color-light: rgba(183, 159, 204, 0); /* Light shadow color */
-    --highlight-hover-color: #bfc305; /* Hover highlight color */
+    --highlight-hover-color: #000000; /* Hover highlight color */
     --button-shadow-inset: rgba(255, 255, 255, 0.2); /* Inset shadow for buttons */
     --button-shadow-outset: rgba(0, 0, 0, 0.2); /* Outset shadow for buttons */
-    --button-hover-shadow-inset: #bfc305; /* Inset shadow on hover */
-    --button-hover-shadow-outset: #bfc305; /* Outset shadow on hover */
+    --button-hover-shadow-inset: #000000; /* Inset shadow on hover */
+    --button-hover-shadow-outset: #010101; /* Outset shadow on hover */
     --hero-overlay-color: rgba(15, 17, 23, 0.5); /* Hero section overlay */
     --faq-border-color: #676562; /* FAQ item border color */
     --step-box-shadow-color: rgba(0, 0, 0, 0.1); /* Step box shadow color */
-    --back-to-top-color: #bfc305; /* Back to top button color */
+    --back-to-top-color: #ffffff; /* Back to top button color */
     --toggle-icon-color: #676562; /* FAQ toggle icon color */
 }
 
