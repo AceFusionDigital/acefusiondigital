@@ -20,7 +20,7 @@
     --hero-overlay-color: rgba(15, 17, 23, 0.5); /* Hero section overlay */
     --faq-border-color: #676562; /* FAQ item border color */
     --step-box-shadow-color: rgba(0, 0, 0, 0.1); /* Step box shadow color */
-    --back-to-top-color: #ffffff; /* Back to top button color */
+    --back-to-top-color: #00e1ff; /* Back to top button color */
     --toggle-icon-color: #676562; /* FAQ toggle icon color */
 }
 
@@ -659,6 +659,8 @@ header nav {
     align-items: center;
 }
 
+
+
 @media (max-width: 768px) {
     .burger-menu {
         display: none;
@@ -834,3 +836,4 @@ header nav {
 .calendly-inline-widget {
     margin: 0 auto;
 }
+
