@@ -8,12 +8,12 @@
     --highlight-text-color: #676562; /* Medium gray for highlighted text */
     --button-background: #2b2d33; /* Dark blue-gray for buttons */
     --button-hover-background: #000000; /* Medium gray for button hover */
-    --box-shadow-color: rgba(43, 45, 51, 0.5); /* Dark blue-gray shadow */
+    --box-shadow-color: #2b2d3380; /* Dark blue-gray shadow */
     --grid-size: 20px; /* Size of the grid lines */
     --grid-color: rgba(255, 255, 255, 0.1); /* Grid line color with opacity, adjusted for better visibility */
-    --box-shadow-color-light: rgba(183, 159, 204, 0); /* Light shadow color */
+    --box-shadow-color-light: rgba(136, 0, 255, 0); /* Light shadow color */
     --highlight-hover-color: #000000; /* Hover highlight color */
-    --button-shadow-inset: rgba(255, 255, 255, 0.2); /* Inset shadow for buttons */
+    --button-shadow-inset: #ffffff33; /* Inset shadow for buttons */
     --button-shadow-outset: rgba(0, 0, 0, 0.2); /* Outset shadow for buttons */
     --button-hover-shadow-inset: #00e1ff; /* Inset shadow on hover */
     --button-hover-shadow-outset: #010101; /* Outset shadow on hover */
@@ -29,6 +29,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 html {
@@ -45,6 +46,7 @@ body {
     linear-gradient(var(--grid-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
     background-size: var(--grid-size) var(--grid-size);    
+    
 }
 
 /* Infographic */
@@ -102,7 +104,7 @@ p {
 
 /* Container */
 .container {
-    width: 80%;
+    width: 1348px;
     margin: 0 auto;
     overflow: hidden;
     text-align: center;
@@ -836,4 +838,3 @@ header nav {
 .calendly-inline-widget {
     margin: 0 auto;
 }
-
